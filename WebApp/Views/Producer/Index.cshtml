@@ -3,7 +3,7 @@
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Категории</h2>
+            <h2 class="text-primary">Производители</h2>
         </div>
         <div class="col-6 text-right">
             <a asp-controller="Producer" asp-action="Create" class="btn btn-primary">
@@ -32,8 +32,8 @@
                 @foreach (var producer in Model)
                 {
                     <tr>
-                        <td width="50%">@producer.Id</td>
-                        <td width="30%">@producer.Title</td>
+                        <td width="30%">@producer.Id</td>
+                        <td width="50%">@producer.Title</td>
                         <td class="text-center">
                             <div class="w-75 btn-group" role="group">
                                 <a asp-controller="Producer" asp-route-Id="@producer.Id" asp-action="Edit" class="btn btn-primary mx-2">

@@ -23,8 +23,15 @@
                         ID
                     </th>
                     <th> 
-                         Название 
-                     </th> 
+                        Название 
+                     </th>
+                    <th>
+                        Описание
+                    </th>
+                    <th>
+                        Рейтинг
+                    </th>
+
                     <th></th>
                 </tr>
             </thead>
@@ -32,8 +39,10 @@
                 @foreach (var producer in Model)
                 {
                     <tr>
-                        <td width="30%">@producer.Id</td>
-                        <td width="50%">@producer.Title</td>
+                        <td width="10%">@producer.Id</td>
+                        <td width="20%">@producer.Title</td>
+                        <td width="40%">@producer.Description</td>
+                        <td width="20%">@producer.Rating</td>
                         <td class="text-center">
                             <div class="w-75 btn-group" role="group">
                                 <a asp-controller="Producer" asp-route-Id="@producer.Id" asp-action="Edit" class="btn btn-primary mx-2">
